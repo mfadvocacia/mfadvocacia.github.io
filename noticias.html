@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html ng-app="myApp" ng-controller="myCtrl" >
+<head>
+  <!-- Site made with Mobirise Website Builder v4.7.2, https://mobirise.com -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Mobirise v4.7.2, mobirise.com">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <link rel="shortcut icon" href="assets/images/nologomf2-145x144.png" type="image/x-icon">
+  <meta name="description" content="">
+  <title>Home</title>
+  <link rel="stylesheet" href="assets/web/assets/mobirise-icons/mobirise-icons.css">
+  <link rel="stylesheet" href="assets/tether/tether.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="assets/socicon/css/styles.css">
+  <link rel="stylesheet" href="assets/animatecss/animate.min.css">
+  <link rel="stylesheet" href="assets/dropdown/css/style.css">
+  <link rel="stylesheet" href="assets/theme/css/style.css">
+  <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/3.6.4/firebase.js"></script>
+    <!-- AngularFire -->
+    <script src="https://cdn.firebase.com/libs/angularfire/2.2.0/angularfire.min.js"></script>
+    <script src="https://code.angularjs.org/1.2.16/angular-route.js" data-semver="1.2.16"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+        apiKey: "AIzaSyBu_XXs9shfcKDscuU1pbAwSwvFzfY5no8",
+        authDomain: "secret-6b802.firebaseapp.com",
+        databaseURL: "https://secret-6b802.firebaseio.com",
+        projectId: "secret-6b802",
+        storageBucket: "secret-6b802.appspot.com",
+        messagingSenderId: "905604774636"
+        };
+        firebase.initializeApp(config);
+    </script>
+  
+  
+  
+</head>
+<body style="margin-top: 50px">
+<section class="menu cid-qDPjNxXqiI" once="menu" id="menu1-e">
+    <nav class="navbar navbar-expand beta-menu navbar-dropdown align-items-center navbar-fixed-top navbar-toggleable-sm shadow">
+
+            <div class="menu-logo">
+                <div class="navbar-brand">
+                    <span class="navbar-logo">                    
+                        <img src="assets/images/nologomf2-145x144.png" alt="logo do mf adovogado" title="" style="height: 3.8rem;">                    
+                    </span>
+                    <span class="navbar-caption-wrap"><span class="navbar-caption text-white display-4">MF ADVOCACIA</span></span>
+                </div>
+        </div>
+    </nav>
+</section>
+
+<section class="mbr-section article content12 cid-qRHODIOwoG " id="noticias">
+     
+
+    <div class="container">
+        <div class="media-container-row">           
+            <div  class="mbr-text counter-container col-12 col-md-8 mbr-fonts-style display-7">
+               <h2 class="align-center pb-3 mbr-fonts-style display-2 text-primary ">Notícias</h2>
+               <div ng-repeat="new in todos">
+                <ul>
+                    <li><strong>{{new.titulo}} <span ng-show="new.data">({{new.data}})</span></strong>- {{new.descricao}}</li>
+                   
+                </ul>
+               </div>
+            </div>            
+        </div>
+        <div class="row justify-content-md-center display-7 "><a id="ver" class=" px-3" href="/" >Voltar</a></div>
+    </div>
+</section>
+
+<script src="assets/web/assets/jquery/jquery.min.js"></script>
+  <script src="assets/popper/popper.min.js"></script>
+  <script src="assets/tether/tether.min.js"></script>
+  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/smoothscroll/smooth-scroll.js"></script>
+  <script src="assets/touchswipe/jquery.touch-swipe.min.js"></script>
+  <script src="assets/viewportchecker/jquery.viewportchecker.js"></script>
+  <script src="assets/parallax/jarallax.min.js"></script>
+  <script src="assets/dropdown/js/script.min.js"></script>
+  <script src="assets/theme/js/script.js"></script>
+ <!-- AngularJS -->
+    
+  <script src="app.js"></script>
+</body>
+</html>

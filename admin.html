@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <style>
+        .teste {
+           text-align: center;   
+        }
+
+        .tabela{
+            margin-top: 60px;        
+        }
+
+        @media (min-width: 600px) 
+        {
+          .tabela, .inserir{
+            max-width: 50%;
+            margin: 0 auto;
+           }      
+        }
+
+        .noticia{        
+            display: flex;
+            justify-content: center;        
+        }
+
+        .botao{
+            width: 30px;
+            margin-left: 10px;
+        }
+
+        .titulo{
+            width: 500px;    
+            font-weight: bold;
+        }
+
+        img{
+            width: 30px;
+        }
+        label{
+            width: 80px;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/3.6.4/firebase.js"></script>
+    <!-- AngularFire -->
+    <script src="https://cdn.firebase.com/libs/angularfire/2.2.0/angularfire.min.js"></script>
+
+    <script>
+        // Initialize Firebase
+        var config = {
+        apiKey: "AIzaSyBu_XXs9shfcKDscuU1pbAwSwvFzfY5no8",
+        authDomain: "secret-6b802.firebaseapp.com",
+        databaseURL: "https://secret-6b802.firebaseio.com",
+        projectId: "secret-6b802",
+        storageBucket: "secret-6b802.appspot.com",
+        messagingSenderId: "905604774636"
+        };
+        firebase.initializeApp(config);
+    </script>
+</head>   
+<body  ng-controller="loginCtrl">
+    <div class="teste" ng-show="!logado">
+        <h1>Login!</h1>
+
+        <form ng-submit='login()'>
+          <div class="form-group row justify-content-center">
+            <label for="email" class="mr-3">Usuario</label>
+            <input id="email" ng-model='email' type="text" placeholder="Email" required >
+          </div>
+          <div class="form-group row justify-content-center">
+            <label for="password" class="mr-3">Password</label>
+
+            <input id="password" ng-model='password' type="password" placeholder="Password" required>
+          </div>
+          <button class="btn btn-success">Login</button>
+        </form>
+    </div>
+    
+    <div ng-show="logado" class="inserir">  
+       <form ng-submit='add()'>      
+        <div class="form-group">
+        <label for="titulo">Título</label>
+        <input id="titulo" ng-model='titulo' type="text" placeholder="" required style="width: 600px">
+      </div>
+      <div class="form-group">
+        <label for="descricao">Texto</label>
+         <textarea rows="4" cols="50" ng-model='descricao'  name="comment" style="width:600px">
+        Enter text here...</textarea> 
+      </div>
+       <button class="btn btn-success mb-5">Cadastrar Notícia</button>
+      </form>  
+    </div>
+    
+    <div class="tabela">
+    <div ng-repeat="(key, noticia) in todos" ng-show="logado" class="noticia" style="border: 1px solid">
+        <div class="titulo">
+            <p>{{noticia.titulo}} <span ng-show="noticia.data">({{noticia.data}})</span></p>
+        </div>
+        <div class="botao">
+            <a href="" ng-click="removeItem(noticia)"><img src="assets/images/remover.png" alt="remover noticia advocacia recife"></a>
+        </div>
+    </div>
+    </div>
+     
+  <script src="app.js"></script>   
+</body>
+</html>
