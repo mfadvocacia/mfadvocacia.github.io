@@ -149,6 +149,9 @@ body {
   border-color: #24374e !important;
   color: #ffffff !important;
 }
+.btn-outline-primary{
+   border-color: #24374e !important; 
+}
 .btn-primary:hover,
 .btn-primary:focus,
 .btn-primary.focus,
