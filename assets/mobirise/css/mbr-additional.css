@@ -1377,7 +1377,8 @@ body {
 }
 .cid-qDPjNxXqiI .navbar {
   padding: .5rem 0;
-  background: #24374e;
+  //background: #202735;
+  background: linear-gradient(#244362,#202735);
   transition: none;
   min-height: 77px;
 }
@@ -1431,6 +1432,8 @@ body {
   word-break: break-word;
   min-width: 7rem;
   margin: .3rem 0;
+  flex-direction: column;
+  
 }
 .cid-qDPjNxXqiI .menu-logo .navbar-brand .navbar-caption-wrap .navbar-caption {
   line-height: 1.2rem !important;
@@ -1757,7 +1760,8 @@ body {
   color: #c1c1c1 !important;
 }
 .cid-qRHyl6kfj5 {
-  background-image: url("../../../assets/images/banner1024-491.jpg");
+  background-image: url("../../../assets/images/marcio/nova.png");
+  box-sizing: border-box;
 }
 .cid-qRHyl6gvbZ .mbr-brand__name {
   font-size: 16px;
@@ -2370,4 +2374,16 @@ h2 {
 
 #ver { 
     border: 4px solid #dee2e6;
+}
+
+@media (max-width: 400px) {
+    #titulomf{
+         margin-top: 0px !important; 
+    }
+}
+
+@media (min-width: 400px) {
+    #titulomf{
+         margin-top: -100px !important; 
+    }
 }
